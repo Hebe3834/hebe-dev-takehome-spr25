@@ -1,5 +1,5 @@
 import { ResponseType } from "@/lib/types/apiResponse";
-import { createRequest, getRequest, editRequest } from "@/db/connection";
+import { createRequest, getRequest, editRequest } from "@/server/db/connection";
 import { ServerResponseBuilder } from "@/lib/builders/serverResponseBuilder";
 import { InputException } from "@/lib/errors/inputExceptions";
 
