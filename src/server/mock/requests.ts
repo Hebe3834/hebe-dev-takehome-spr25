@@ -18,8 +18,6 @@ import {
   validateMockCreateItemRequest,
   validateMockEditStatusRequest,
 } from "@/lib/validation/mock/requests";
-import { getCollection } from "@/db/connection";
-
 
 
 export function getMockItemRequests(
@@ -39,7 +37,7 @@ export function getMockItemRequests(
   return paginatedRequests;
 }
 
-export async function createNewMockRequest(request: any): Promise<MockItemRequest> {
+export function createNewMockRequest(request: any): MockItemRequest {
   const validatedRequest = validateMockCreateItemRequest(request);
   if (!validatedRequest) {
     throw new InvalidInputError("created item request");
@@ -54,17 +52,6 @@ export async function createNewMockRequest(request: any): Promise<MockItemReques
     status: RequestStatus.PENDING,
   };
   mockItemRequests.push(newRequest);
-
-  const requestsCollection = await getCollection("requests");
-  // console.log(">>requestsCollection<<");
-  // console.log(requestsCollection);
-  if (requestsCollection) {
-    const result = await requestsCollection.insertOne(newRequest);
-    console.log(result);
-  } else {
-    throw new Error("Server Error: No requests collection");
-  }
-
   return newRequest;
 }
 
