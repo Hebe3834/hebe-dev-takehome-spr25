@@ -2,6 +2,7 @@
 
 import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
+import Dropdown from "@/components/atoms/Dropdown";
 import { useState } from "react";
 
 /**
@@ -31,6 +32,7 @@ export default function ItemRequestsPage() {
           label="Item"
         />
         <Button onClick={handleAddItem}>Approve</Button>
+        <Dropdown></Dropdown>
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="underline">Currently approved items:</h3>

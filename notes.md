@@ -18,7 +18,7 @@
     - [ ] Batch deletes
 - [ ] Front-end
   - [ ] Minimum Requirements
-    - [ ] Dropdown component
+    - [v] Dropdown component
     - [ ] Table component
     - [ ] Base page [table with data]
     - [ ] Table dropdown interactivity
@@ -31,3 +31,4 @@
 
 # Notes
 This was the most backend I've done outside of some intro tasks from webdev club 2 years ago so it may not be the best practices but I learned a lot! Thank you!
+Also I think I misunderstood something so currently the id my code uses is mongodb's ObjectId and not a generated id
