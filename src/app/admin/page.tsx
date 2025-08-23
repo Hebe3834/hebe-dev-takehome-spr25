@@ -4,6 +4,7 @@ import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import Dropdown from "@/components/atoms/Dropdown";
 import { useState } from "react";
+import RequestsTable from "@/components/tables/RequestsTable";
 
 /**
  * Legacy front-end code from Crisis Corner's previous admin page!
@@ -33,6 +34,7 @@ export default function ItemRequestsPage() {
         />
         <Button onClick={handleAddItem}>Approve</Button>
         <Dropdown></Dropdown>
+        <RequestsTable></RequestsTable>
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="underline">Currently approved items:</h3>
